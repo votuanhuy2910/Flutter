@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:demo_tuan2/sidebar/widgets/histories.dart';
 import 'package:demo_tuan2/sidebar/widgets/home.dart';
-import 'package:demo_tuan2/sidebar/widgets/menu.dart';
+import 'package:demo_tuan2/sidebar/widgets/profile.dart';
 import 'package:flutter/material.dart';
 
 class HomeSidebar extends StatefulWidget {
@@ -20,9 +20,9 @@ class _HomeSidebarState extends State<HomeSidebar> {
   int _currentIndex = 0;
 
   final tabs = [
-    HomeWidget(),
-    Histories(),
-    MenuWidget(),
+    const HomeWidget(),
+    const Histories(),
+    const ProfileWidget(),
   ];
 
   @override
@@ -30,7 +30,7 @@ class _HomeSidebarState extends State<HomeSidebar> {
     Size size = MediaQuery.of(context).size;
 
     return AnimatedContainer(
-      duration: Duration(milliseconds: 200),
+      duration: const Duration(milliseconds: 200),
       transform: Matrix4.translationValues(xOffset, yOffset, 0)
         ..scale(isDrawerOpen ? 0.90 : 1.00)
         ..rotateZ(isDrawerOpen ? pi / 20 : 0),
@@ -42,7 +42,7 @@ class _HomeSidebarState extends State<HomeSidebar> {
       child: SafeArea(
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Color.fromRGBO(248, 249, 250, 1),
+            backgroundColor: const Color.fromRGBO(248, 249, 250, 1),
             elevation: 1,
             title: GestureDetector(
               child: Image.asset("assets/images/exchange.png"),
@@ -65,7 +65,7 @@ class _HomeSidebarState extends State<HomeSidebar> {
           ),
           body: tabs[_currentIndex],
           bottomNavigationBar: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(30),
                 topRight: Radius.circular(30),
@@ -75,10 +75,10 @@ class _HomeSidebarState extends State<HomeSidebar> {
               fixedColor: Colors.greenAccent,
               type: BottomNavigationBarType.fixed,
               selectedFontSize: 22,
-              selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
+              selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
               unselectedFontSize: 16,
               iconSize: 30,
-              items: [
+              items: const [
                 BottomNavigationBarItem(
                   icon: Icon(Icons.home),
                   label: 'Home',
@@ -88,8 +88,8 @@ class _HomeSidebarState extends State<HomeSidebar> {
                   label: 'Histories',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.menu),
-                  label: 'Menu',
+                  icon: Icon(Icons.person),
+                  label: 'Profile',
                 ),
               ],
               currentIndex: _currentIndex,

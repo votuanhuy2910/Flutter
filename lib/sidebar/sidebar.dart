@@ -26,7 +26,7 @@ class _SidebarState extends State<Sidebar> {
         backgroundColor: Colors.indigo,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
-          title: Align(
+          title: const Align(
             child: Text("About"),
             alignment: Alignment.center,
           ),
@@ -54,14 +54,13 @@ class _SidebarState extends State<Sidebar> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          CircleAvatar(
-                            backgroundImage: NetworkImage(
-                              "https://scontent.fsgn3-1.fna.fbcdn.net/v/t39.30808-6/254292753_3033327733652083_122642816157798380_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=q3iSwUou8TwAX-qYhqX&tn=c22k_TV-AWthEy3P&_nc_ht=scontent.fsgn3-1.fna&oh=00_AT-cE-rdlgwZEX4VZOPSx_SBZ3-fnbQZVv2ygwEjUQC36Q&oe=622346BF",
-                            ),
+                          const CircleAvatar(
+                            backgroundImage:
+                                AssetImage('assets/images/avt.png'),
                             radius: 40,
                           ),
                           TextButton.icon(
-                            icon: Padding(
+                            icon: const Padding(
                               padding: const EdgeInsets.only(right: 5),
                               child: Icon(
                                 FontAwesomeIcons.wifi,
@@ -73,9 +72,10 @@ class _SidebarState extends State<Sidebar> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (_) => HomeSpecialization()));
+                                      builder: (_) =>
+                                          const HomeSpecialization()));
                             },
-                            label: Text(
+                            label: const Text(
                               "Here Specialization",
                               style: TextStyle(
                                 color: Colors.white,
@@ -86,17 +86,17 @@ class _SidebarState extends State<Sidebar> {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
-                      Text(
+                      const Text(
                         "Vo Tuan Huy",
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 30,
                             fontWeight: FontWeight.w800),
                       ),
-                      Text(
+                      const Text(
                         "votuanhuy2910@gmail.com",
                         style: TextStyle(color: Colors.blue, fontSize: 18),
                       )
@@ -107,70 +107,82 @@ class _SidebarState extends State<Sidebar> {
                   children: [
                     InkWell(
                       onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (_) => MessengerPage()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (_) => const MessengerPage()));
                       },
-                      child: NewRow(
+                      child: const NewRow(
                         icon: Icons.message,
                         text: "Messenger",
                         sizeFont: 22,
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     InkWell(
                       onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (_) => CompanyPage()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (_) => const CompanyPage()));
                       },
-                      child: NewRow(
+                      child: const NewRow(
                         icon: Icons.groups,
                         text: "Company",
                         sizeFont: 22,
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     InkWell(
                       onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (_) => FavoritePage()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (_) => const FavoritePage()));
                       },
-                      child: NewRow(
+                      child: const NewRow(
                         icon: Icons.favorite,
                         text: "Favorites",
                         sizeFont: 22,
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     InkWell(
                       onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (_) => ProfilePage()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (_) => const ProfilePage()));
                       },
-                      child: NewRow(
+                      child: const NewRow(
                         icon: Icons.person,
                         text: "Profile",
                         sizeFont: 22,
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     InkWell(
                       onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (_) => SettingPage()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (_) => const SettingPage()));
                       },
-                      child: NewRow(
+                      child: const NewRow(
                         icon: Icons.settings,
                         text: "Setting",
                         sizeFont: 22,
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                   ],
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => RegisterScreen()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => const RegisterScreen()));
                   },
                   child: Row(
                     children: [
@@ -178,10 +190,10 @@ class _SidebarState extends State<Sidebar> {
                         Icons.cancel,
                         color: Colors.white.withOpacity(0.5),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      Text(
+                      const Text(
                         'Log Out',
                         style: TextStyle(
                           color: Colors.white,

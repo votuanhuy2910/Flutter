@@ -3,8 +3,10 @@ import 'package:demo_tuan2/sidebar/before_sidebar/widgets/top_account.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class ProfileMusicPage extends StatelessWidget {
-  const ProfileMusicPage({Key? key}) : super(key: key);
+class ProfileWidget extends StatelessWidget {
+  const ProfileWidget({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
