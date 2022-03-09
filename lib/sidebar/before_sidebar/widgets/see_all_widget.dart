@@ -6,12 +6,14 @@ class SeeAllRowWidget extends StatelessWidget {
     Key? key,
     required this.size,
     required this.title,
-    required this.subTitle,
+    required this.subTitle, this.seeAllColor, this.iconColor,
   }) : super(key: key);
 
   final Size size;
   final String title;
   final String subTitle;
+  final seeAllColor;
+  final iconColor;
 
   @override
   Widget build(BuildContext context) {

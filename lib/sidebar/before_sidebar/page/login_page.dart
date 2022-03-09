@@ -47,7 +47,7 @@ class LoginPage extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (_) => ForgotPasswordScreen()));
+                              builder: (_) => const ForgotPasswordScreen()));
                     },
                     child: Text(
                       "Forrgot Password?",
@@ -65,8 +65,8 @@ class LoginPage extends StatelessWidget {
               size: size,
               titleButton: 'Login',
               onTab: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => MainSidebar()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => const MainSidebar()));
               },
             ),
           ],

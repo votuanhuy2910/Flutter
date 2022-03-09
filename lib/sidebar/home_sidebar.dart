@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:demo_tuan2/sidebar/widgets/histories.dart';
+import 'package:demo_tuan2/sidebar/widgets/booking.dart';
 import 'package:demo_tuan2/sidebar/widgets/home.dart';
 import 'package:demo_tuan2/sidebar/widgets/profile.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +21,7 @@ class _HomeSidebarState extends State<HomeSidebar> {
 
   final tabs = [
     const HomeWidget(),
-    const Histories(),
+    const BookingWidget(),
     const ProfileWidget(),
   ];
 
@@ -85,7 +85,7 @@ class _HomeSidebarState extends State<HomeSidebar> {
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.bookmark),
-                  label: 'Histories',
+                  label: 'Booking',
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.person),
