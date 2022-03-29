@@ -93,11 +93,11 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Scaffold(
         key: _scaffoldKey,
-        backgroundColor: Color.fromARGB(255, 208, 234, 247),
+        backgroundColor: const Color.fromARGB(255, 208, 234, 247),
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
-          title: Text(
+          title: const Text(
             'AppBar',
             style: TextStyle(
                 fontSize: 36,
@@ -122,7 +122,7 @@ class _HomePageState extends State<HomePage> {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   '"$quote"',
-                  style: TextStyle(fontSize: 16, color: Colors.black87),
+                  style: const TextStyle(fontSize: 16, color: Colors.black87),
                 ),
               ),
               Container(
@@ -154,8 +154,8 @@ class _HomePageState extends State<HomePage> {
                       return Padding(
                         padding: const EdgeInsets.all(4.0),
                         child: Material(
-                          borderRadius: BorderRadius.all(Radius.circular(24)),
-                          color: Color(0xFF84D8FF),
+                          borderRadius: const BorderRadius.all(Radius.circular(24)),
+                          color: const Color(0xFF84D8FF),
                           elevation: 4,
                           child: InkWell(
                             onDoubleTap: () {
@@ -189,10 +189,10 @@ class _HomePageState extends State<HomePage> {
                                     isLiked: words[index].isFavorite,
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     size: 42,
-                                    circleColor: CircleColor(
+                                    circleColor: const CircleColor(
                                         start: Color(0xff00ddff),
                                         end: Color(0xff0099cc)),
-                                    bubblesColor: BubblesColor(
+                                    bubblesColor: const BubblesColor(
                                       dotPrimaryColor: Color(0xff33b5e5),
                                       dotSecondaryColor: Color(0xff0099cc),
                                     ),
@@ -205,7 +205,7 @@ class _HomePageState extends State<HomePage> {
                                       //   size: 42,
                                       // );
                                       return ImageIcon(
-                                        AssetImage("assets/images/heart.png"),
+                                        const AssetImage("assets/images/heart.png"),
                                         color:
                                             isLiked ? Colors.red : Colors.white,
                                         size: 42,
@@ -218,7 +218,7 @@ class _HomePageState extends State<HomePage> {
                                     textAlign: TextAlign.start,
                                     text: TextSpan(
                                       text: firstLetter,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 89,
                                           fontWeight: FontWeight.bold,
                                           shadows: [
@@ -231,7 +231,7 @@ class _HomePageState extends State<HomePage> {
                                       children: [
                                         TextSpan(
                                           text: leftLetter,
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                               fontSize: 56,
                                               fontWeight: FontWeight.bold,
                                               shadows: [
@@ -250,7 +250,7 @@ class _HomePageState extends State<HomePage> {
                                     child: AutoSizeText(
                                       '"$qoute"',
                                       maxFontSize: 28,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 28,
                                           color: Colors.black87,
                                           letterSpacing: 2),
@@ -274,7 +274,7 @@ class _HomePageState extends State<HomePage> {
                           padding: const EdgeInsets.symmetric(vertical: 24),
                           alignment: Alignment.center,
                           child: ListView.builder(
-                              physics: NeverScrollableScrollPhysics(),
+                              physics: const NeverScrollableScrollPhysics(),
                               scrollDirection: Axis.horizontal,
                               itemCount: 5,
                               itemBuilder: (context, index) {
@@ -288,7 +288,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-            backgroundColor: Color(0xFF84D8FF),
+            backgroundColor: const Color(0xFF84D8FF),
             onPressed: () {
               setState(() {
                 getEnglishToday();
@@ -297,12 +297,12 @@ class _HomePageState extends State<HomePage> {
             child: Image.asset("assets/images/exchange.png")),
         drawer: Drawer(
           child: Container(
-            color: Color.fromRGBO(202, 240, 248, 1),
+            color: const Color.fromRGBO(202, 240, 248, 1),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 36, left: 16),
+                const Padding(
+                  padding: EdgeInsets.only(top: 36, left: 16),
                   child: Text(
                     'Your mind',
                     style: TextStyle(
@@ -318,7 +318,7 @@ class _HomePageState extends State<HomePage> {
                       label: 'Your control',
                       onTap: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (_) => ControlPage()));
+                            MaterialPageRoute(builder: (_) => const ControlPage()));
                       }),
                 ),
                 Padding(
@@ -327,7 +327,7 @@ class _HomePageState extends State<HomePage> {
                       label: 'QR Code',
                       onTap: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (_) => HomeQr()));
+                            MaterialPageRoute(builder: (_) => const HomeQr()));
                       }),
                 ),
                 // Padding(
@@ -347,7 +347,7 @@ class _HomePageState extends State<HomePage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (_) => OnboardingScreen()));
+                                builder: (_) => const OnboardingScreen()));
                       }),
                 ),
                 Padding(
@@ -356,7 +356,7 @@ class _HomePageState extends State<HomePage> {
                       label: 'Food',
                       onTap: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (_) => HomeListView()));
+                            MaterialPageRoute(builder: (_) => const HomeListView()));
                       }),
                 ),
               ],
@@ -369,15 +369,15 @@ class _HomePageState extends State<HomePage> {
 
   Widget buildIndicator(bool isActive, Size size) {
     return AnimatedContainer(
-      duration: Duration(milliseconds: 200),
+      duration: const Duration(milliseconds: 200),
       // curve: Curves.bounceInOut,
       height: 8,
       margin: const EdgeInsets.symmetric(horizontal: 8),
       width: isActive ? size.width * 1 / 5 : 24,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(24)),
-        color: isActive ? Color.fromRGBO(163, 228, 219, 1) : Color(0xFFC7C4C4),
-        boxShadow: [
+        borderRadius: const BorderRadius.all(Radius.circular(24)),
+        color: isActive ? const Color.fromRGBO(163, 228, 219, 1) : const Color(0xFFC7C4C4),
+        boxShadow: const [
           BoxShadow(
             color: Colors.black38,
             offset: Offset(2, 3),
@@ -397,8 +397,8 @@ class _HomePageState extends State<HomePage> {
           Container(
             child: Material(
               elevation: 4,
-              borderRadius: BorderRadius.all(Radius.circular(24)),
-              color: Color.fromRGBO(163, 228, 219, 1),
+              borderRadius: const BorderRadius.all(Radius.circular(24)),
+              color: const Color.fromRGBO(163, 228, 219, 1),
               child: InkWell(
                 onTap: () {
                   Navigator.push(
@@ -407,11 +407,11 @@ class _HomePageState extends State<HomePage> {
                           builder: (_) => AllWordsPage(words: this.words)));
                 },
                 splashColor: Colors.black38,
-                borderRadius: BorderRadius.all(Radius.circular(24)),
+                borderRadius: const BorderRadius.all(Radius.circular(24)),
                 child: Container(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 24, vertical: 12),
-                    child: Text(
+                    child: const Text(
                       "Show Grid More",
                       style: TextStyle(fontSize: 14),
                     )),
@@ -422,19 +422,19 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.symmetric(horizontal: 18),
             child: Material(
               elevation: 4,
-              borderRadius: BorderRadius.all(Radius.circular(24)),
-              color: Color.fromRGBO(163, 228, 219, 1),
+              borderRadius: const BorderRadius.all(Radius.circular(24)),
+              color: const Color.fromRGBO(163, 228, 219, 1),
               child: InkWell(
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (_) => AllPage(words: words)));
                 },
                 splashColor: Colors.black38,
-                borderRadius: BorderRadius.all(Radius.circular(24)),
+                borderRadius: const BorderRadius.all(Radius.circular(24)),
                 child: Container(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 24, vertical: 12),
-                    child: Text(
+                    child: const Text(
                       "Show List More",
                       style: TextStyle(fontSize: 14),
                     )),

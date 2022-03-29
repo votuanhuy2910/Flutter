@@ -18,7 +18,7 @@ class _GenerateState extends State<Generate> {
         backgroundColor: Color.fromRGBO(255, 253, 222, 1),
         appBar: AppBar(
           backgroundColor: Color.fromRGBO(88, 0, 255, 1),
-          title: Text(
+          title: const Text(
             "Generate",
             style: TextStyle(fontSize: 22),
           ),
@@ -32,18 +32,18 @@ class _GenerateState extends State<Generate> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 QrImage(data: qrData),
-                SizedBox(height: 20),
-                Text("Get your data/link to the QR CODE"),
+                const SizedBox(height: 20),
+                const Text("Get your data/link to the QR CODE"),
                 TextField(
                   controller: qrText,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: "Enter the Data/link",
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 FlatButton(
-                  padding: EdgeInsets.all(15.0),
-                  child: Text(
+                  padding: const EdgeInsets.all(15.0),
+                  child: const Text(
                     "GENERATE QR CODE",
                     style: TextStyle(fontSize: 18),
                   ),
@@ -60,7 +60,7 @@ class _GenerateState extends State<Generate> {
                   },
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular((20.0)),
-                    side: BorderSide(color: Colors.blue, width: 3.0),
+                    side: const BorderSide(color: Colors.blue, width: 3.0),
                   ),
                 ),
               ],

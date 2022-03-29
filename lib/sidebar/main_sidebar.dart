@@ -3,7 +3,7 @@ import 'package:demo_tuan2/sidebar/sidebar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MainSidebar());
+  runApp(const MainSidebar());
 }
 
 class MainSidebar extends StatelessWidget {
@@ -20,7 +20,7 @@ class MainSidebar extends StatelessWidget {
       home: SafeArea(
         child: Scaffold(
           body: Stack(
-            children: [
+            children: const [
               Sidebar(),
               HomeSidebar(),
             ],

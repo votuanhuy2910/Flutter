@@ -9,10 +9,10 @@ class AllPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          backgroundColor: Color.fromRGBO(223, 246, 255, 1),
+          backgroundColor: const Color.fromRGBO(223, 246, 255, 1),
           appBar: AppBar(
-            backgroundColor: Color.fromRGBO(223, 246, 255, 1),
-            title: Text(
+            backgroundColor: const Color.fromRGBO(223, 246, 255, 1),
+            title: const Text(
               'English Today',
               style: TextStyle(
                   fontSize: 34,
@@ -20,7 +20,7 @@ class AllPage extends StatelessWidget {
                   fontWeight: FontWeight.bold),
             ),
             leading: IconButton(
-                icon: Icon(Icons.arrow_back_ios, color: Colors.black, size: 28),
+                icon: const Icon(Icons.arrow_back_ios, color: Colors.black, size: 28),
                 onPressed: () {
                   Navigator.pop(context);
                 }),
@@ -33,9 +33,9 @@ class AllPage extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 8),
                   decoration: BoxDecoration(
                       color: (index % 2) == 0
-                          ? Color.fromRGBO(21, 114, 161, 1)
-                          : Color.fromRGBO(223, 246, 255, 1),
-                      borderRadius: BorderRadius.all(Radius.circular(8))),
+                          ? const Color.fromRGBO(21, 114, 161, 1)
+                          : const Color.fromRGBO(223, 246, 255, 1),
+                      borderRadius: const BorderRadius.all(Radius.circular(8))),
                   child: ListTile(
                     contentPadding: const EdgeInsets.all(16),
                     title: Text(

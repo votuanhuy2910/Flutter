@@ -75,11 +75,11 @@ class _QuoteFromNounState extends State<QuoteFromNoun> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: Color.fromRGBO(191, 255, 240, 1),
+      backgroundColor: const Color.fromRGBO(191, 255, 240, 1),
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(191, 255, 240, 1),
+        backgroundColor: const Color.fromRGBO(191, 255, 240, 1),
         // elevation: 0,
-        title: Text(
+        title: const Text(
           'New Contents',
           style: TextStyle(fontSize: 36, color: Colors.black),
         ),
@@ -97,7 +97,7 @@ class _QuoteFromNounState extends State<QuoteFromNoun> {
           child: Container(
             alignment: Alignment.center,
             child: AutoSizeText('$quote',
-                style: TextStyle(fontSize: 26, color: Colors.black)),
+                style: const TextStyle(fontSize: 26, color: Colors.black)),
           ),
         ),
       ),

@@ -16,10 +16,10 @@ class _HomeQrState extends State<HomeQr> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromRGBO(255, 253, 222, 1),
+        backgroundColor: const Color.fromRGBO(255, 253, 222, 1),
         appBar: AppBar(
-          backgroundColor: Color.fromRGBO(88, 0, 255, 1),
-          title: Text(
+          backgroundColor: const Color.fromRGBO(88, 0, 255, 1),
+          title: const Text(
             "QR CODE",
             style: TextStyle(fontSize: 22),
           ),
@@ -37,13 +37,13 @@ class _HomeQrState extends State<HomeQr> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Image(
+              const Image(
                   image: NetworkImage(
                       "https://play-lh.googleusercontent.com/seJd5m8IS6tKWvEwA7Db-X18K7MjrlCSQGlfmKdxOwnge3TvhYVFXaKTIg7-YhW-TA")),
-              SizedBox(height: 50),
+              const SizedBox(height: 50),
               // flatButon("Scan QR CODE", Scan()),
-              SizedBox(height: 10),
-              flatButon("Scan QR CODE", Generate()),
+              const SizedBox(height: 10),
+              flatButon("Scan QR CODE", const Generate()),
             ],
           ),
         ),
@@ -53,10 +53,10 @@ class _HomeQrState extends State<HomeQr> {
 
   Widget flatButon(String text, Widget widget) {
     return FlatButton(
-      padding: EdgeInsets.all(15.0),
+      padding: const EdgeInsets.all(15.0),
       child: Text(
         text,
-        style: TextStyle(fontSize: 18),
+        style: const TextStyle(fontSize: 18),
       ),
       onPressed: () {
         Navigator.of(context)
@@ -64,7 +64,7 @@ class _HomeQrState extends State<HomeQr> {
       },
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular((20.0)),
-        side: BorderSide(color: Colors.blue, width: 3.0),
+        side: const BorderSide(color: Colors.blue, width: 3.0),
       ),
     );
   }

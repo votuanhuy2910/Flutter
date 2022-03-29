@@ -37,7 +37,7 @@ class _HomeSpecializationState extends State<HomeSpecialization> {
           backgroundColor: Colors.grey.shade200,
           elevation: 0,
           leading: IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_ios,
               color: Colors.black,
             ),
@@ -57,7 +57,7 @@ class _HomeSpecializationState extends State<HomeSpecialization> {
               ),
             ],
             color: Colors.white,
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(30),
               topRight: Radius.circular(30),
             ),

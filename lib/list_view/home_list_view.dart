@@ -11,7 +11,7 @@ class HomeListView extends StatefulWidget {
 }
 
 class _HomeListViewState extends State<HomeListView> {
-  final CategoriesScroller categoriesScroller = CategoriesScroller();
+  final CategoriesScroller categoriesScroller = const CategoriesScroller();
   ScrollController controller = ScrollController();
   bool closeTopContainer = false;
   double topContainer = 0;
@@ -26,8 +26,8 @@ class _HomeListViewState extends State<HomeListView> {
         height: 150,
         margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(20)),
-          color: Color.fromRGBO(191, 255, 240, 1),
+          borderRadius: const BorderRadius.all(Radius.circular(20)),
+          color: const Color.fromRGBO(191, 255, 240, 1),
           boxShadow: [
             BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10),
           ],
@@ -42,16 +42,16 @@ class _HomeListViewState extends State<HomeListView> {
                 children: [
                   Text(
                     post["name"],
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                   Text(
                     post["brand"],
-                    style: TextStyle(fontSize: 16, color: Colors.black),
+                    style: const TextStyle(fontSize: 16, color: Colors.black),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Text(
                     "\$ ${post["price"]}",
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontSize: 25,
                         color: Colors.black,
                         fontWeight: FontWeight.bold),
@@ -93,12 +93,12 @@ class _HomeListViewState extends State<HomeListView> {
 
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromRGBO(251, 248, 241, 1),
+        backgroundColor: const Color.fromRGBO(251, 248, 241, 1),
         appBar: AppBar(
-          backgroundColor: Color.fromRGBO(247, 236, 222, 1),
+          backgroundColor: const Color.fromRGBO(247, 236, 222, 1),
           elevation: 1,
           leading: IconButton(
-              icon: Icon(Icons.arrow_back_ios, color: Colors.black),
+              icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
               onPressed: () {
                 Navigator.pop(context);
               }
@@ -112,16 +112,16 @@ class _HomeListViewState extends State<HomeListView> {
               ),
           actions: [
             IconButton(
-              icon: Icon(Icons.search, color: Colors.black),
+              icon: const Icon(Icons.search, color: Colors.black),
               onPressed: () {
                 showSearch(context: context, delegate: CustomSearch());
               },
             ),
             IconButton(
-              icon: Icon(Icons.person, color: Colors.black),
+              icon: const Icon(Icons.person, color: Colors.black),
               onPressed: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => LoginScreen()));
+                    context, MaterialPageRoute(builder: (_) => const LoginScreen()));
               },
             ),
           ],
@@ -134,12 +134,12 @@ class _HomeListViewState extends State<HomeListView> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   TextButton.icon(
-                    icon: Icon(Icons.home_work, color: Colors.grey),
+                    icon: const Icon(Icons.home_work, color: Colors.grey),
                     onPressed: () {
                       Navigator.push(
                           context, MaterialPageRoute(builder: (_) => Home()));
                     },
-                    label: Text(
+                    label: const Text(
                       "Home",
                       style: TextStyle(
                         color: Colors.grey,
@@ -149,9 +149,9 @@ class _HomeListViewState extends State<HomeListView> {
                     ),
                   ),
                   TextButton.icon(
-                    icon: Icon(Icons.menu, color: Colors.black),
+                    icon: const Icon(Icons.menu, color: Colors.black),
                     onPressed: () {},
-                    label: Text(
+                    label: const Text(
                       "Menu",
                       style: TextStyle(
                         color: Color.fromRGBO(32, 50, 57, 1),
@@ -162,14 +162,14 @@ class _HomeListViewState extends State<HomeListView> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               AnimatedOpacity(
-                duration: Duration(milliseconds: 200),
+                duration: const Duration(milliseconds: 200),
                 opacity: closeTopContainer ? 0 : 1,
                 child: AnimatedContainer(
-                  duration: Duration(milliseconds: 200),
+                  duration: const Duration(milliseconds: 200),
                   width: size.width,
                   alignment: Alignment.topCenter,
                   height: closeTopContainer ? 0 : categoryHeight,
@@ -180,7 +180,7 @@ class _HomeListViewState extends State<HomeListView> {
                   child: ListView.builder(
                       controller: controller,
                       itemCount: itemsData.length,
-                      physics: BouncingScrollPhysics(),
+                      physics: const BouncingScrollPhysics(),
                       itemBuilder: (conntext, index) {
                         double scale = 1.0;
                         if (topContainer > 0.5) {

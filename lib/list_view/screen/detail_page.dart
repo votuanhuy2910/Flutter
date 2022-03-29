@@ -67,7 +67,7 @@ class _DetailPageState extends State<DetailPage> {
                     ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
+                      children: const [
                         Text(
                           "4.6",
                           style: TextStyle(
@@ -82,7 +82,7 @@ class _DetailPageState extends State<DetailPage> {
                 ),
               ),
               const Padding(
-                padding: const EdgeInsets.fromLTRB(20, 0, 20, 10),
+                padding: EdgeInsets.fromLTRB(20, 0, 20, 10),
                 child: Text(
                   "Vietnamese - 4.9km - \$-\$\$",
                   style: TextStyle(
@@ -152,7 +152,7 @@ class _DetailPageState extends State<DetailPage> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(20, 10, 20, 20),
+                padding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
                 child: Column(
                   children: [
                     menuItemtab(
@@ -202,9 +202,9 @@ class _DetailPageState extends State<DetailPage> {
         child: Stack(
           children: [
             Padding(
-              padding: EdgeInsets.only(left: 50),
+              padding: const EdgeInsets.only(left: 50),
               child: Container(
-                padding: EdgeInsets.only(left: 70, right: 20),
+                padding: const EdgeInsets.only(left: 70, right: 20),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   color: Colors.white,

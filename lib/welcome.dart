@@ -8,7 +8,7 @@ class Welcome extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromRGBO(144, 224, 239, 1),
+        backgroundColor: const Color.fromRGBO(144, 224, 239, 1),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
@@ -37,7 +37,7 @@ class Welcome extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                               color: Color.fromARGB(221, 99, 93, 93))),
                       Padding(
-                        padding: const EdgeInsets.only(right: 8),
+                        padding: EdgeInsets.only(right: 8),
                         child: Text('Qoute"',
                             textAlign: TextAlign.right,
                             style: TextStyle(
@@ -53,12 +53,12 @@ class Welcome extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(bottom: 72),
                   child: RawMaterialButton(
-                      shape: CircleBorder(),
+                      shape: const CircleBorder(),
                       fillColor: Color.fromRGBO(202, 240, 248, 1),
                       onPressed: () {
                         Navigator.pushAndRemoveUntil(
                             context,
-                            MaterialPageRoute(builder: (_) => HomePage()),
+                            MaterialPageRoute(builder: (_) => const HomePage()),
                             (route) => false);
                       },
                       child: Image.asset("assets/images/right_arrow.png")),

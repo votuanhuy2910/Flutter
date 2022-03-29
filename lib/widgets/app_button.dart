@@ -16,7 +16,7 @@ class AppButton extends StatelessWidget {
         width: double.infinity,
         margin: const EdgeInsets.symmetric(horizontal: 16),
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             color: Colors.white,
             boxShadow: [
               BoxShadow(
@@ -26,7 +26,7 @@ class AppButton extends StatelessWidget {
         child: Text(
           label,
           style:
-              TextStyle(fontSize: 24, color: Color.fromARGB(255, 44, 178, 204)),
+              const TextStyle(fontSize: 24, color: Color.fromARGB(255, 44, 178, 204)),
         ),
       ),
     );

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Quotes().getAll();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.black,
       ),
-      home: Welcome(),
+      home: const Welcome(),
     );
   }
 }

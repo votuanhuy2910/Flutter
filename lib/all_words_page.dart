@@ -12,9 +12,9 @@ class AllWordsPage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromRGBO(191, 255, 240, 1),
+          backgroundColor:const Color.fromRGBO(191, 255, 240, 1),
           // elevation: 0,
-          title: Text(
+          title: const Text(
             'English Today',
             style: TextStyle(
                 fontSize: 36, color: Colors.black, fontWeight: FontWeight.bold),
@@ -39,7 +39,7 @@ class AllWordsPage extends StatelessWidget {
         body: InkWell(
           onTap: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (_) => QuoteFromNoun()));
+                context, MaterialPageRoute(builder: (_) => const QuoteFromNoun()));
           },
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
@@ -50,13 +50,13 @@ class AllWordsPage extends StatelessWidget {
               children: words
                   .map((e) => Container(
                         alignment: Alignment.center,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Color.fromRGBO(191, 255, 240, 1),
                             borderRadius:
                                 BorderRadius.all(Radius.circular(10))),
                         child: AutoSizeText(
                           e.noun ?? '',
-                          style: TextStyle(fontSize: 32),
+                          style: const TextStyle(fontSize: 32),
                           maxLines: 1,
                           overflow: TextOverflow.fade,
                         ),
@@ -75,15 +75,15 @@ class AllWordsPage extends StatelessWidget {
       alignment: Alignment.centerLeft,
       child: Material(
         elevation: 4,
-        borderRadius: BorderRadius.all(Radius.circular(24)),
-        color: Color.fromRGBO(163, 228, 219, 1),
+        borderRadius: const BorderRadius.all(Radius.circular(24)),
+        color: const Color.fromRGBO(163, 228, 219, 1),
         child: InkWell(
           onTap: () {},
           splashColor: Colors.black38,
-          borderRadius: BorderRadius.all(Radius.circular(24)),
+          borderRadius: const BorderRadius.all(Radius.circular(24)),
           child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-              child: Text(
+              child: const Text(
                 "Show More",
                 style: TextStyle(fontSize: 18),
               )),

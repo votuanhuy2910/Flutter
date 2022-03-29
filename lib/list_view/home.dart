@@ -21,7 +21,7 @@ class _HomeState extends State<Home> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             "Home",
             style: TextStyle(
               color: Colors.black,
@@ -33,7 +33,7 @@ class _HomeState extends State<Home> {
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: Icon(
+            icon: const Icon(
               FontAwesomeIcons.arrowLeft,
               size: 20,
               color: Colors.black,
@@ -45,7 +45,7 @@ class _HomeState extends State<Home> {
           width: width,
           child: ListView(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Padding(
@@ -54,7 +54,7 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
-                      children: [
+                      children: const [
                         Icon(Icons.location_on),
                         SizedBox(
                           width: 3,
@@ -73,12 +73,12 @@ class _HomeState extends State<Home> {
                           border: Border.all(
                             color: Colors.grey.shade300,
                           )),
-                      child: Icon(Icons.shopping_basket),
+                      child: const Icon(Icons.shopping_basket),
                     ),
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Padding(
@@ -87,7 +87,7 @@ class _HomeState extends State<Home> {
                   height: 160,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Color.fromRGBO(255, 248, 230, 1),
+                    color: const Color.fromRGBO(255, 248, 230, 1),
                   ),
                   child: Row(
                     children: [
@@ -99,7 +99,7 @@ class _HomeState extends State<Home> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               "10-minute\ndelivery",
                               style: TextStyle(
                                 fontSize: 20,
@@ -110,7 +110,7 @@ class _HomeState extends State<Home> {
                             SizedBox(
                               height: width / 30,
                             ),
-                            Text(
+                            const Text(
                               "Enjoy your food in just 10\nminutes. Free Forever",
                               style: TextStyle(
                                 color: Color.fromARGB(255, 158, 162, 153),
@@ -119,13 +119,13 @@ class _HomeState extends State<Home> {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Container(
                         height: 150,
                         width: width / 2.5,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage(
                               "assets/images/home_pizza/pizzagirl.png",
@@ -137,11 +137,11 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
+              const Padding(
+                padding: EdgeInsets.all(20.0),
                 child: Text(
                   "Explore cuisines",
                   style: TextStyle(
@@ -156,7 +156,7 @@ class _HomeState extends State<Home> {
                   scrollDirection: Axis.horizontal,
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(left: 20),
+                      padding: const EdgeInsets.only(left: 20),
                       child: pizzaTabs(
                         "Vietnamese",
                         "52",
@@ -201,13 +201,13 @@ class _HomeState extends State<Home> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Row(
-                  children: [
+                  children: const [
                     Text(
                       "Restaurant in ",
                       style: TextStyle(
@@ -231,7 +231,7 @@ class _HomeState extends State<Home> {
                   scrollDirection: Axis.horizontal,
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(left: 20),
+                      padding: const EdgeInsets.only(left: 20),
                       child: restaurantsTabs("https://tinyurl.com/mr2d4zz6",
                           "Pizzeria Mazza", "Vietnamese", "4.9km"),
                     ),
@@ -271,7 +271,7 @@ class _HomeState extends State<Home> {
           //     label: "User",
           //   ),
           // ],
-          backgroundColor: Color.fromARGB(255, 218, 203, 167),
+          backgroundColor: const Color.fromARGB(255, 218, 203, 167),
           buttonBackgroundColor: Colors.white,
           animationCurve: Curves.decelerate,
           color: Colors.white,
@@ -295,11 +295,11 @@ class _HomeState extends State<Home> {
     double width = MediaQuery.of(context).size.width;
 
     return Padding(
-      padding: EdgeInsets.only(right: 20),
+      padding: const EdgeInsets.only(right: 20),
       child: InkWell(
         onTap: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (_) => DetailPage()));
+              context, MaterialPageRoute(builder: (_) => const DetailPage()));
         },
         child: Container(
           width: width / 2.4,
@@ -315,22 +315,22 @@ class _HomeState extends State<Home> {
                       image: NetworkImage(address), fit: BoxFit.cover),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Text(
                 name,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Text(
                 "$dish -$diatance - \$-10",
-                style: TextStyle(
+                style: const TextStyle(
                   color: Color.fromARGB(255, 158, 162, 153),
                   fontWeight: FontWeight.bold,
                 ),
@@ -346,13 +346,13 @@ class _HomeState extends State<Home> {
     double width = MediaQuery.of(context).size.width;
 
     return Padding(
-      padding: EdgeInsets.only(right: 20),
+      padding: const EdgeInsets.only(right: 20),
       child: Container(
         height: 170,
         width: width / 3.3,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: Color.fromRGBO(255, 248, 230, 1),
+          color: const Color.fromRGBO(255, 248, 230, 1),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -360,20 +360,20 @@ class _HomeState extends State<Home> {
           children: [
             Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
             Text(
               "$no restaurants",
-              style: TextStyle(
+              style: const TextStyle(
                 color: Color.fromARGB(255, 158, 162, 153),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Image(

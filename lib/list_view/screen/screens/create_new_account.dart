@@ -14,7 +14,7 @@ class CreateNewAccount extends StatelessWidget {
 
     return Stack(
       children: [
-        BackgroundImage(image: 'assets/images/register_bg.png'),
+        const BackgroundImage(image: 'assets/images/register_bg.png'),
         Scaffold(
           backgroundColor: Colors.transparent,
           body: SingleChildScrollView(
@@ -55,7 +55,7 @@ class CreateNewAccount extends StatelessWidget {
                             width: 2,
                           ),
                         ),
-                        child: Icon(
+                        child: const Icon(
                           FontAwesomeIcons.arrowUp,
                           color: kWhite,
                         ),
@@ -68,41 +68,41 @@ class CreateNewAccount extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    TextInputField(
+                    const TextInputField(
                       icon: FontAwesomeIcons.user,
                       hint: 'User',
                       inputType: TextInputType.name,
                       inputAction: TextInputAction.next,
                     ),
-                    TextInputField(
+                    const TextInputField(
                       icon: FontAwesomeIcons.envelope,
                       hint: 'Email',
                       inputType: TextInputType.emailAddress,
                       inputAction: TextInputAction.next,
                     ),
-                    PasswordInput(
+                    const PasswordInput(
                       icon: FontAwesomeIcons.lock,
                       hint: 'Password',
                       inputType: TextInputType.name,
                       inputAction: TextInputAction.next,
                     ),
-                    PasswordInput(
+                    const PasswordInput(
                       icon: FontAwesomeIcons.lock,
                       hint: 'Confirm Password',
                       inputType: TextInputType.name,
                       inputAction: TextInputAction.done,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 25,
                     ),
-                    RoundedButton(buttonName: 'Register'),
-                    SizedBox(
+                    const RoundedButton(buttonName: 'Register'),
+                    const SizedBox(
                       height: 30,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
+                        const Text(
                           'Already have an account? ',
                           style: kBodyText,
                         ),
@@ -118,7 +118,7 @@ class CreateNewAccount extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               border: Border(
                                 bottom: BorderSide(
                                   width: 2,
@@ -130,7 +130,7 @@ class CreateNewAccount extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                   ],

@@ -14,7 +14,7 @@ class LoginScreen extends StatelessWidget {
     return SafeArea(
       child: Stack(
         children: [
-          BackgroundImage(
+          const BackgroundImage(
             image: 'assets/images/login_bg.png',
           ),
           Scaffold(
@@ -31,7 +31,7 @@ class LoginScreen extends StatelessWidget {
                           onPressed: () {
                             Navigator.pop(context);
                           },
-                          icon: Icon(
+                          icon: const Icon(
                             FontAwesomeIcons.angleDoubleLeft,
                             color: Colors.white,
                             size: 30,
@@ -41,7 +41,7 @@ class LoginScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                Flexible(
+                const Flexible(
                   child: Center(
                     child: Text(
                       'FOOD',
@@ -57,13 +57,13 @@ class LoginScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      TextInputField(
+                      const TextInputField(
                         icon: FontAwesomeIcons.envelope,
                         hint: 'Email',
                         inputType: TextInputType.emailAddress,
                         inputAction: TextInputAction.next,
                       ),
-                      PasswordInput(
+                      const PasswordInput(
                         icon: FontAwesomeIcons.lock,
                         hint: 'Password',
                         inputType: TextInputType.name,
@@ -74,20 +74,20 @@ class LoginScreen extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (_) => ForgotPassword()));
+                                  builder: (_) => const ForgotPassword()));
                         },
-                        child: Text(
+                        child: const Text(
                           'Forgot Password',
                           style: kBodyText,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 25,
                       ),
-                      RoundedButton(
+                      const RoundedButton(
                         buttonName: 'Login',
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 25,
                       ),
                     ],
@@ -96,14 +96,14 @@ class LoginScreen extends StatelessWidget {
                 InkWell(
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => CreateNewAccount()));
+                        MaterialPageRoute(builder: (_) => const CreateNewAccount()));
                   },
                   child: Container(
-                    child: Text(
+                    child: const Text(
                       'Create New Account',
                       style: kBodyText,
                     ),
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       border: Border(
                         bottom: BorderSide(
                           width: 1,
@@ -113,7 +113,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
               ],

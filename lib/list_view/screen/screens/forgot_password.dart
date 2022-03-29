@@ -24,13 +24,13 @@ class ForgotPassword extends StatelessWidget {
               onPressed: () {
                 Navigator.pop(context);
               },
-              icon: Icon(
+              icon: const Icon(
                 FontAwesomeIcons.angleDoubleLeft,
                 color: kWhite,
                 size: 30,
               ),
             ),
-            title: Text(
+            title: const Text(
               'Forgot Password',
               style: kBodyText,
             ),
@@ -45,24 +45,24 @@ class ForgotPassword extends StatelessWidget {
                   ),
                   Container(
                     width: size.width * 0.8,
-                    child: Text(
+                    child: const Text(
                       'Enter your email we will send instruction to reset your password',
                       style: kBodyText,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
-                  TextInputField(
+                  const TextInputField(
                     icon: FontAwesomeIcons.envelope,
                     hint: 'Email',
                     inputType: TextInputType.emailAddress,
                     inputAction: TextInputAction.done,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
-                  RoundedButton(buttonName: 'Send'),
+                  const RoundedButton(buttonName: 'Send'),
                 ],
               ),
             ),

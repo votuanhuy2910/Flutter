@@ -18,7 +18,7 @@ class NewRow extends StatelessWidget {
       child: Row(
         children: [
           Icon(icon, color: Colors.white),
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
           Text(

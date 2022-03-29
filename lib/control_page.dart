@@ -33,9 +33,9 @@ class _ControlPageState extends State<ControlPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromRGBO(177, 208, 224, 1),
+        backgroundColor: const Color.fromRGBO(177, 208, 224, 1),
         appBar: AppBar(
-          backgroundColor: Color.fromRGBO(177, 208, 224, 1),
+          backgroundColor: const Color.fromRGBO(177, 208, 224, 1),
           elevation: 0,
           title: const Text(
             'Your control',
@@ -58,13 +58,13 @@ class _ControlPageState extends State<ControlPage> {
           width: double.infinity,
           child: Column(
             children: [
-              Spacer(),
+              const Spacer(),
               const Text(
                 'How much a number word at once',
                 style: TextStyle(
                     fontSize: 18, color: Color.fromRGBO(3, 4, 94, 0.7)),
               ),
-              Spacer(),
+              const Spacer(),
               Text(
                 '${valueSlider.toInt()}',
                 style: const TextStyle(
@@ -77,8 +77,8 @@ class _ControlPageState extends State<ControlPage> {
                   min: 5,
                   max: 100,
                   divisions: 95,
-                  activeColor: Color.fromRGBO(3, 4, 94, 0.7),
-                  inactiveColor: Color.fromRGBO(3, 4, 94, 0.7),
+                  activeColor: const Color.fromRGBO(3, 4, 94, 0.7),
+                  inactiveColor: const Color.fromRGBO(3, 4, 94, 0.7),
                   onChanged: (value) {
                     print(value);
                     setState(() {
